@@ -58,7 +58,7 @@ ROOT_URLCONF = 'social_book.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['tenplates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -139,5 +139,5 @@ LOGIN_REDIRECT_URL = 'home'
 LOGOUT_URL = 'logout'
 LOGOUT_REDIRECT_URL = 'login'
 
-SOCIAL_AUTH_GITHUB_KEY = '#############'
-SOCIAL_AUTH_GITHUB_SECRET = '#############'
+SOCIAL_AUTH_GITHUB_KEY = '2ab30b82827d01873178'
+SOCIAL_AUTH_GITHUB_SECRET = 'd5cbc5dbecf33103f5d7c159e83e36d377e01a85'
