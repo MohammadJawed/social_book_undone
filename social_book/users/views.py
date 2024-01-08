@@ -6,6 +6,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 # from .filters import UserFilter
 from . managers import CustomUserManager
+from django.views.decorators.cache import cache_control
 
 from .forms import UploadedFileForm
 from .models import UploadedFile, CustomUser
@@ -175,6 +176,7 @@ def uploaded_files(request):
     # print(test)
     return render(request, 'uploaded_files.html', {'user_files': user_files})
 
+@cache_control(no_cache=True, must_revalidate=True, no_store=True)
 @login_required(login_url = 'signin')
 def IndexPage(request):
     # users = User.objects.all()
